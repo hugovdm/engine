@@ -190,9 +190,9 @@ class Locale {
                                    && language.length != 4)),
        assert(script == null || script.length == 4),
        assert(region == null || (region.length >= 2 && region.length <= 3)),
-       assert(variants == null || variants.length == 0 || variants[0].length >= 4), // ignore: prefer_is_empty, const_eval_type_bool_num_string, https://github.com/dart-lang/sdk/issues/34798, https://dart-review.googlesource.com/c/sdk/+/71340
+       assert(variants == null || variants.length == 0 || variants[0].length >= 4), // ignore: const_eval_type_bool_num_string, https://dart-review.googlesource.com/c/sdk/+/71340. Also demonstrates https://github.com/dart-lang/sdk/issues/34798
        _languageCode = language,
-       scriptCode = script,  // ignore: prefer_initializing_formals, https://github.com/dart-lang/sdk/issues/34797
+       scriptCode = script,  // ignore: prefer_initializing_formals, parameter name and member name are different.
        _countryCode = region,
        _variants = variants;
 
